@@ -55,15 +55,15 @@ unsigned int faStr3(const char *str) {
     int sumNumOfSymbol = 0;
     while (*str) {
         if (*str != ' ') {
-            if(!inWord) count++;
+            if (!inWord) count++;
             inWord = true;
             sumNumOfSymbol++;
         } else if (inWord) {
-            inWord=false;
+            inWord = false;
         }
         str++;
     }
     if (count == 0) return 0;
-    int result = static_cast<int>((double)(sumNumOfSymbol/count) + 0.5);
+    int result = static_cast<int>(static_cast<double>(sumNumOfSymbol/count) + 0.5);
     return result;
 }
