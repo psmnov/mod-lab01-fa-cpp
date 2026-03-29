@@ -50,5 +50,20 @@ unsigned int faStr2(const char *str) {
 }
 
 unsigned int faStr3(const char *str) {
-    return 0;
+    int count = 0;
+    bool inWord = false;
+    int sumNumOfSymbol = 0;
+    while (*str) {
+        if (*str != ' ') {
+            if(!inWord) count++;
+            inWord = true;
+            sumNumOfSymbol++;
+        } else if (inWord) {
+            inWord=false;
+        }
+        str++;
+    }
+    if (count == 0) return 0;
+    int result = static_cast<int>((double)(sumNumOfSymbol/count) + 0.5);
+    return result;
 }
