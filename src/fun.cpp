@@ -5,14 +5,13 @@ unsigned int faStr1(const char *str) {
     int count = 0;
     bool inWord = false;
     bool anyNumInWord = false;
-    while(*str) {
-        if (str!=' ') {
+    while (*str) {
+        if (*str != ' ') {
             inWord = true;
             if (*str >= '0' && *str <= '9') {
                 anyNumInWord = true;
             }
-        }
-        else {
+        } else {
             if (inWord && !anyNumInWord) {
                 count++;
             }
@@ -21,6 +20,7 @@ unsigned int faStr1(const char *str) {
         }
         str++;
     }
+    return count;
 }
 
 unsigned int faStr2(const char *str) {
