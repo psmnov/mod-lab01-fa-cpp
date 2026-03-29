@@ -1,4 +1,5 @@
 // Copyright 2022 UNN-IASR
+#include <iostream>
 #include "fun.h"
 
 unsigned int faStr1(const char *str) {
