@@ -64,7 +64,7 @@ unsigned int faStr3(const char *str) {
         str++;
     }
     if (count == 0) return 0;
-    double preResult = static_cast<double>(sumNumOfSymbol/count)
+    double preResult = static_cast<double>(sumNumOfSymbol/count);
     int result = static_cast<int>(preResult + 0.5);
     return result;
 }
